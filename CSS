@@ -1,0 +1,40 @@
+.carrossel{
+    position: relative;
+    max-width: 500px;
+    max-height: 250px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carrossel-seg{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-item{
+    min-width: 100%;
+}
+.carrossel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.bolinhas{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.bolinha{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(114, 114, 114);
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.bolinha:hover{
+    background-color: rgb(62, 63, 63);
+}
