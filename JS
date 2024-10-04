@@ -1,0 +1,17 @@
+const bolinhas = document.querySelectorAll('.bolinha');
+const carrosselSeg = document.querySelector('.carrossel-seg');
+let index = 0; 
+
+
+bolinhas.forEach((bolinha, i) => {
+    bolinha.addEventListener('click', () => {
+        index = i;
+    atualizarCarrossel ();
+    });
+});
+
+function atualizarCarrossel() {
+    carrosselSeg.style.transform = `transLateX(-${index * 100}%)`;
+    bolinhas.forEach(b => b.classList.remove('ativa'));
+    bolinhas[index].classList.add('ativa');
+}
